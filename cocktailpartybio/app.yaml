@@ -1,0 +1,31 @@
+application: cocktailpartybio
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /signup
+  script: cocktailpartybio.app
+  secure: always
+
+- url: /login
+  script: cocktailpartybio.app
+  secure: always
+
+- url: /forgot
+  script: cocktailpartybio.app
+  secure: always
+
+- url: /images
+  static_dir: static/images
+  mime_type: image/jpg
+
+- url: .*
+  script: cocktailpartybio.app
+
+
+
+libraries:
+- name: webapp2
+  version: "2.5.1"

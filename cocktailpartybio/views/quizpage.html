@@ -1,0 +1,71 @@
+{% extends "main.html" %}
+
+{% block maincontent %}
+
+<h2>Quiz For Level {{ q_level }}:</h2>
+
+
+
+<form class="form" action= "/grade" method="">
+
+    <ol>
+
+        <li> {{ question1 }}</li>
+        A. {{ a_1_A }} <br>
+        B. {{ a_1_B }} <br>
+        C. {{ a_1_C }} <br>
+        D. {{ a_1_D }} <br><br>
+        <input type="radio" name="question1" value="1">A
+        <input type="radio" name="question1" value="2">B
+        <input type="radio" name="question1" value="3">C
+        <input type="radio" name="question1" value="4">D<br><br>
+
+        <li> {{ question2 }}</li>
+        A. {{ a_2_A }} <br>
+        B. {{ a_2_B }} <br>
+        C. {{ a_2_C }} <br>
+        D. {{ a_2_D }} <br><br>
+        <input type="radio" name="question2" value="1">A
+        <input type="radio" name="question2" value="2">B
+        <input type="radio" name="question2" value="3">C
+        <input type="radio" name="question2" value="4">D<br><br>
+
+        <li> {{ question3 }}</li>
+        A. {{ a_3_A }} <br>
+        B. {{ a_3_B }} <br>
+        C. {{ a_3_C }} <br>
+        D. {{ a_3_D }} <br><br>
+        <input type="radio" name="question3" value="1">A
+        <input type="radio" name="question3" value="2">B
+        <input type="radio" name="question3" value="3">C
+        <input type="radio" name="question3" value="4">D<br><br>
+
+        <li> {{ question4 }}</li>
+        A. {{ a_4_A }} <br>
+        B. {{ a_4_B }} <br>
+        C. {{ a_4_C }} <br>
+        D. {{ a_4_D }} <br><br>
+        <input type="radio" name="question4" value="1">A
+        <input type="radio" name="question4" value="2">B
+        <input type="radio" name="question4" value="3">C
+        <input type="radio" name="question4" value="4">D<br><br>
+
+        <li> {{ question5 }}</li>
+        A. {{ a_5_A }} <br>
+        B. {{ a_5_B }} <br>
+        C. {{ a_5_C }} <br>
+        D. {{ a_5_D }} <br><br>
+        <input type="radio" name="question5" value="1">A
+        <input type="radio" name="question5" value="2">B
+        <input type="radio" name="question5" value="3">C
+        <input type="radio" name="question5" value="4">D
+    </ol>
+
+    <input type="hidden" name="level" value= {{ q_level }} />
+    <input type="hidden" name="answers" value= {{ test_answers }} />
+    <button type="submit" class="btn">Submit Answers</button>
+
+</form>
+
+
+{% endblock %}

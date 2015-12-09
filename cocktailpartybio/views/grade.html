@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+
+{% block maincontent %}
+
+<h2>{{header}}</h2>
+{% if not level  >= 5 %}
+<br>
+<li>{{footer}}</li>
+{% endif %}
+<br><br>
+
+
+{% if level  == 0 %}
+<img src="/images/celebration0.gif" width = "70%" height="70%"/>
+{% endif %}
+
+{% if level  == 1 %}
+<img src="/images/celebration1.gif" width = "70%" height="70%"/>
+{% endif %}
+
+{% if level  == 2 %}
+<img src="/images/celebration2.gif" width = "70%" height="70%"/>
+{% endif %}
+
+{% if level  == 3 %}
+<img src="/images/celebration3.gif" width = "70%" height="70%"/>
+{% endif %}
+
+{% if level  == 4 %}
+<img src="/images/celebration4.gif" width = "70%" height="70%"/>
+{% endif %}
+
+{% if level  == 5 %}
+<iframe width="0" height="0" src="https://www.youtube.com/embed/Y6ljFaKRTrI?start=7&autoplay=1&cc_load_policy=1" frameborder="0" allowfullscreen></iframe>
+<img src="/images/celebration5.gif" width = "70%" height="70%"/>
+{% endif %}
+
+{% endblock %}

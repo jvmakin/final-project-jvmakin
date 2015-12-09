@@ -1,0 +1,45 @@
+{% extends "main.html" %}
+
+{% block maincontent %}
+
+<h2>Welcome to the Quiz for Level {{ q_level }}!</h2>
+<br>
+<li> Click to load quiz:</li><br>
+
+{% if q_level == 0 %}
+<form class="form" action= "/quiz0" method="POST">
+	<button type="submit" class="btn">GENERATE QUIZ</button>
+</form>
+{% endif %}
+
+{% if q_level == 1 %}
+<form class="form" action= "/quiz1" method="POST">
+	<button type="submit" class="btn">GENERATE QUIZ</button>
+</form>
+{% endif %}
+
+{% if q_level == 2 %}
+<form class="form" action= "/quiz2" method="POST">
+	<button type="submit" class="btn">GENERATE QUIZ</button>
+</form>
+{% endif %}
+
+{% if q_level == 3 %}
+<form class="form" action= "/quiz3" method="POST">
+	<button type="submit" class="btn">GENERATE QUIZ</button>
+</form>
+{% endif %}
+
+{% if q_level == 4 %}
+<form class="form" action= "/quiz4" method="POST">
+	<button type="submit" class="btn">GENERATE QUIZ</button>
+</form>
+{% endif %}
+
+{% if q_level == 5 %}
+<form class="form" action= "/quiz5" method="POST">
+	<button type="submit" class="btn">GENERATE QUIZ</button>
+</form>
+{% endif %}
+
+{% endblock %}

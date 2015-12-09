@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+            #body {
+            height: 100%;
+            width: 100%;
+        }
+            #header {
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height: 150px;
+            }
+        #nav {
+            font-family:Impact, Charcoal, sans-serif;
+            text-align:right;
+            line-height:30px;
+            background-color:#eeeeee;
+            height:1000px;
+            width:130px;
+            float:left;
+            padding:5px;
+            font-size: 125%;
+        }
+        #section {
+
+            padding: 10px;
+            text-align:center;
+        } #smsection {
+            border: 1px solid black;
+            margin: 10px;
+            width: 25%;
+            height: 130px;
+            padding: 10px;
+            float:left;
+            text-align: center;
+            }
+        #footer {
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+
+        }.container {
+
+                margin: auto;
+                width: 150px;
+                clear: both;
+
+        }
+        .container input {
+            width: 100%;
+            clear: both;
+        }
+            #form_login {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
+        </style>
+    </head>
+
+  <body>
+
+
+  <div id = "nav">
+
+
+
+          <br><br><br><br><br><br><br><br>
+          <a href="/"><li>HOME</a><br>
+        {% if not user %}
+          <a href="/about"><li>ABOUT</a><br><br>
+        {% else %}
+          <a href="/dash"><li>DASHBOARD</a><br><br>
+        {% endif %}
+
+          {% if user %}
+
+        {% else %}
+          <a href="/signup"><li>SIGN UP</a> <br>
+        {% endif %}
+
+
+        {% if not user %}
+          <a href="/login"><li>LOG IN</a>
+        {% else %}
+          LOGGED IN AS <br><span style="background-color: OldLace">{{ user.name }}</span> <br> <a href="/logout"><li>LOGOUT</a>
+        {% endif %}
+        <br>
+        <br>
+
+        <a href="/level">((reset))</a> <br>
+      </h2>
+    {% block form %}
+
+    {% endblock %}
+
+  </div>
+    <div id="header">
+      <h1>Cocktail Party Biology</h1>
+      <img src="/images/martini.png" width = "10%" height="40%"/>
+  </div>
+
+  <div id="section">
+    {% block maincontent %}
+
+    {% endblock %}
+  </div>
+
+  </body>
+</html>

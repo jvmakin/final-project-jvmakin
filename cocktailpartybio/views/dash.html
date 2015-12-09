@@ -1,0 +1,100 @@
+{% extends "main.html" %}
+
+{% block maincontent %}
+<h2>Welcome to Your Dashboard, {{ user.name }}!</h2><br>
+
+
+<li>{{ text }}
+<br><br><br>
+<div id =  "smsection">
+    <b> Level 0: Getting Started</b><br><br><br>
+    {% if not user.level >= 0 %}
+
+    Tutorial<br><br>
+    {% else %}
+    <a href="/tutorial0">Tutorial</a><br><br>
+    {% endif %}
+    {% if not user.level = 0 %}
+    Quiz<br><br>
+    {% else %}
+    <a href="/quiz0">Quiz</a><br><br>
+    {% endif %}
+
+</div>
+
+<div id =  "smsection">
+    <b> Level 1: Discussing Science - Without Sounding Like an Asshole</b><br><br>
+    {% if not user.level >= 1 %}
+    Tutorial<br><br>
+    {% else %}
+    <a href="/tutorial1">Tutorial</a><br><br>
+    {% endif %}
+    {% if not user.level = 1 %}
+    Quiz<br><br>
+    {% else %}
+    <a href="/quiz1">Quiz</a><br><br>
+    {% endif %}
+
+</div>
+
+<div id =  "smsection">
+    <b> Level 2: Understanding Cancer Biology</b><br><br><br>
+    {% if not user.level >= 2 %}
+    Tutorial<br><br>
+    {% else %}
+    <a href="/tutorial2">Tutorial</a><br><br>
+    {% endif %}
+    {% if not user.level = 2 %}
+    Quiz<br><br>
+    {% else %}
+    <a href="/quiz2">Quiz</a><br><br>
+    {% endif %}
+
+</div>
+
+<div id =  "smsection">
+    <b> Level 3: Sleep Deprivation</b><br><br>
+    {% if not user.level >= 3 %}
+    Tutorial<br><br>
+    {% else %}
+    <a href="/tutorial3">Tutorial</a><br><br>
+    {% endif %}
+    {% if not user.level = 3 %}
+    Quiz<br><br>
+    {% else %}
+    <a href="/quiz3">Quiz</a><br><br>
+    {% endif %}
+
+</div>
+
+<div id =  "smsection">
+    <b> Level 4: Antibiotic Resistance and You</b><br><br>
+    {% if not user.level >= 4 %}
+    Tutorial<br><br>
+    {% else %}
+    <a href="/tutorial4">Tutorial</a><br><br>
+    {% endif %}
+    {% if not user.level = 4 %}
+    Quiz<br><br>
+    {% else %}
+    <a href="/quiz4">Quiz</a><br><br>
+    {% endif %}
+
+</div>
+
+<div id =  "smsection">
+    <b> Level 5: Scientific Claims and the Media or Natural Medicine</b><br><br>
+    {% if not user.level >= 5 %}
+    Tutorial<br><br>
+    {% else %}
+    <a href="/tutorial5">Tutorial</a><br><br>
+    {% endif %}
+    {% if not user.level = 5 %}
+    Quiz<br><br>
+    {% else %}
+    <a href="/quiz5">Quiz</a><br><br>
+    {% endif %}
+
+</div>
+
+{% endblock %}
