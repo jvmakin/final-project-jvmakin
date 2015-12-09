@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87a00ffa-6ade-47b3-8e85-846e50720a26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cocktailpartybio/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocktailpartybio/Question.py" afterPath="$PROJECT_DIR$/cocktailpartybio/Question.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocktailpartybio/cocktailpartybio.py" afterPath="$PROJECT_DIR$/cocktailpartybio/cocktailpartybio.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocktailpartybio/models.py" afterPath="$PROJECT_DIR$/cocktailpartybio/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocktailpartybio/README" afterPath="$PROJECT_DIR$/cocktailpartybio/README" />
     </list>
     <ignored path="final-project-jvmakin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +26,8 @@
       <file leaf-file-name="README" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cocktailpartybio/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.95689654">
-              <caret line="49" column="101" selection-start-line="49" selection-start-column="101" selection-end-line="49" selection-end-column="101" />
+            <state vertical-scroll-proportion="0.04310345">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -529,8 +526,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cocktailpartybio/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95689654">
-          <caret line="49" column="101" selection-start-line="49" selection-start-column="101" selection-end-line="49" selection-end-column="101" />
+        <state vertical-scroll-proportion="0.04310345">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
           <folding />
         </state>
       </provider>
