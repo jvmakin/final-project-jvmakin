@@ -265,6 +265,7 @@ class AuthenticatedHandler(BaseHandler):
 
         self.render_template('authenticated.html')
 
+#Accessory method that allows a developer to reset their level to 0 (or whatever)
 class LevelHandler(BaseHandler):
     @user_required
     def get(self):
@@ -279,12 +280,11 @@ class LevelHandler(BaseHandler):
         self.render_template('level.html', params)
     def post(self):
 
-        #self.user.raise_level()
-        self.user.set_level(3)
+        self.user.set_level(0)  #currently sets level to 0
         currdata = self.auth.get_session_data(pop=True)
         self.auth.set_session(self.auth.store.user_to_dict(self.user), remember=True)
 
-        self.user.put()
+        self.user.put() #last three lines help to make sure the level gets replaced into the user
         self.redirect(self.uri_for('level'))
 
 

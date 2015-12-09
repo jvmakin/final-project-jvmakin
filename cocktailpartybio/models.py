@@ -4,7 +4,7 @@ import webapp2_extras.appengine.auth.models
 from google.appengine.ext import ndb
 
 from webapp2_extras import security
-
+# this class extends the webapp2 user model with some extra features
 class User(webapp2_extras.appengine.auth.models.User):
 
 
@@ -39,14 +39,14 @@ class User(webapp2_extras.appengine.auth.models.User):
         return None, None
 
 
-    def set_level(self, new_level):
+    def set_level(self, new_level): #sets the user's level to a specific number, this has thus far been used for testing
 
         self.level = new_level
 
-    def get_level(self):
+    def get_level(self):        #returns the user's current level
 
         return self.level
 
-    def raise_level(self):
+    def raise_level(self):      #raises the user's current level by one
 
         self.level += 1

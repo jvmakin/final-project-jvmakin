@@ -1,0 +1,61 @@
+Here is a general explanation of the various files:
+
+-Questions folder: These are csv files containing the questions for a given level; for instance Questions0.csv
+corresponds to questions for level 0
+-Static folder: This file contains the gifs/images on the website
+-Views: This contains the various html files for the different pages:
+    -the 'main.html' file contains the template for the rest of the files including the css formatting
+    -the other html files extend this by inserting their information into the %main content% block
+    -main.html also ensures that users see the 'about page' and 'login/signup' when they aren't logged in and their
+    'dashboard' and 'logout' when they are
+    -some of the views were were adapted from this guy's page: https://github.com/abahgat/webapp2-user-accounts
+        -signup.html: creates a webform that allows a user to be created
+        -verified.html: shows when a user is authenticated, this would usually be done when an email is sent but I didn't
+        want to use email addresses b/c I'm not sure how secure it is. Also that would be annoying as hell.
+        -login.html: creates login form
+        -authenticated.html: displays when a user is logged in
+        -forgot.html: displays when a user clicks 'forgot password' on the login page
+        -resetpassword.html: creates a password reset page
+        -message.html: allows a message to be displayed without creating a separate page
+    -these are the views that I made specifically for this page:
+        -home.html: displays the home page and welcome message
+        -about.html: displays the about page including the about video (which is on youtube)
+        -dash.html: displays the user's dashboard; the message at the top is determined by the level as is which
+        tutorials and quizzes are currently available
+        -tutorial.html: displays the tutorial page based on which link is clicked, the tutorial page for a level higher
+        than the current user's cannot be displayed
+        -quiz.html: displays the create quiz button for a given level
+        -quizpage.html: displays a quiz for a given level
+        -grade.html: is displayed once the quiz is graded if the user passes
+        -wronganswers.html: is displayed once the quiz is graded if the user doesn't pass
+        -level.html: this page isn't part of the final website but allows a developer/grader/curious person to reset their
+        level for testing purposes
+-Question.py: this creates Question and Test classes that create questions and tests from csv files
+-models.py: creates a user model based on the webapp2 model Users
+        -the first two methods were from: https://github.com/abahgat/webapp2-user-accounts
+            -these allow for password reset and authorization
+        -the last three methods I added so that a user can have their level set, raised, or returned
+-index.yaml/app.yaml: utility files that allow this to be run on GAE
+-cocktailpartybio.py: main file for the app
+    -the user_required, BaseHandler, SignupHandler, ForgotPasswordHandler, VerificationHandler, SetPasswordHandler,
+    LoginHandler, LogoutHandler, and AuthenticatedHandler methods were from the same github account with slight modifications
+    -the MainHandler and AboutHandler methods simply display the main and about pages
+    -the LevelHandler allows a developer to reset their level to a specific value (currently 0) for testing
+    -the DashHandler creates a specific message based on the user level and then displays it on the dash page
+    -the TutorialHandlers (0-5) display the tutorial for that level or an error message if the level isn't yet available
+    -the Quiz Handlers(0-5):
+        -the post method displays the load quiz button or an error message if the level of the user doesn't match the
+        level of the quiz page
+        -the get method displays the quiz for the user as well as saving the correct answers to pass to the GradeHandler
+    -the GradeHandler checks for correctness and displays a message to show is the user passed or not
+
+
+
+
+
+
+
+
+
+
+
